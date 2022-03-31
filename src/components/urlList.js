@@ -4,31 +4,39 @@ import styled from 'styled-components';
 const urlList = () => {
     // const [content, setContent] = useState([]);
     const list = [
-        {preview: 'www.naver.com', pagename: '네이버', update: '편집', delete: '제거' },
-        {preview: 'www.naver.com', pagename: '네이버', update: '편집', delete: '제거' },
-        {preview: 'www.naver.com', pagename: '네이버', update: '편집', delete: '제거' },
+        {
+            preview: 'https://en.pimg.jp/050/595/319/1/50595319.jpg',
+            pagename: '네이버',
+            update: '편집',
+            delete: '제거' 
+        },
+        {
+            preview: 'https://en.pimg.jp/050/595/319/1/50595319.jpg',
+            pagename: '다음',
+            update: '편집',
+            delete: '제거' 
+        },
     ];
-    const map = list.map((listing,key) => {
+    const urlItem = list.map((i, idx) => {
         return(
-            listing
-        )
+            <List key={idx}>
+                    <Preview src={i.preview}/> 
+                    <PageName>
+                        {i.pagename} 
+                    </PageName>
+                    <Update>
+                        {i.update}
+                    </Update>
+                    <Delete>
+                        {i.delete}
+                    </Delete>
+            </List>
+            )
     })
     return(
         <>
             <Wrap>
-                {list.map(element => <List Preview={element.preview} />)}
-                <List >
-                    <Preview src="https://en.pimg.jp/050/595/319/1/50595319.jpg" /> 
-                    <PageName>
-                        네이버 
-                    </PageName>
-                    <Update>
-                        편집
-                    </Update>
-                    <Delete>
-                        삭제
-                    </Delete>
-                </List>
+                {urlItem}
             </Wrap>
         </>
     );
@@ -36,7 +44,6 @@ const urlList = () => {
 
 const Wrap = styled.div`
 background-color: #eee;
-border : 3px solid blue;
 justify-content: space-between;
 `;
 
@@ -51,7 +58,8 @@ background-color: green;
 margin : 0 10px;
 `;
 const PageName = styled.div`
-background-color: blue;
+background-color: #aaa;
+align-items: center;
 min-width: 500px;
 `;
 const Update = styled.button`

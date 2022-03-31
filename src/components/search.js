@@ -13,8 +13,8 @@ const Input = styled.input`
 width: 800px;
 height: 80px;
 border-radius: .5rem;
-border: 1px solid red;
-margin: 30px auto;
+border: 1px solid #339af0;
+margin: 30px auto 15px;
 padding: 10px;
 font-size: 24px;
 `;

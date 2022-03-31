@@ -4,13 +4,18 @@ import styled from 'styled-components';
 
 import Search from './components/search';
 import UrlList from './components/urlList';
-
+import BtnList from './components/btnList';
 function App() {
   return (
     <div>
       <Wrap>
         <Search/>
-        <UrlList/>
+
+        <Routes>
+        <Route path="/" element={<UrlList/>}/>
+        </Routes>
+
+        <BtnList/>
       </Wrap>
     </div>
   );
