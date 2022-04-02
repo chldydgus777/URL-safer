@@ -1,21 +1,16 @@
 import { useEffect, useState }  from 'react';
 import styled from 'styled-components';
 
+import Search from './search';
+
 const urlList = () => {
-    // const [content, setContent] = useState([]);
     const list = [
         {
             preview: 'https://en.pimg.jp/050/595/319/1/50595319.jpg',
             pagename: '네이버',
             update: '편집',
             delete: '제거' 
-        },
-        {
-            preview: 'https://en.pimg.jp/050/595/319/1/50595319.jpg',
-            pagename: '다음',
-            update: '편집',
-            delete: '제거' 
-        },
+        }
     ];
     const urlItem = list.map((i, idx) => {
         return(
@@ -32,9 +27,10 @@ const urlList = () => {
                     </Delete>
             </List>
             )
-    })
-    return(
-        <>
+        })
+        return(
+            <>
+            <Search/>
             <Wrap>
                 {urlItem}
             </Wrap>

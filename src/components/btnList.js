@@ -22,16 +22,16 @@ justify-content: space-between;
 
 const Btn = styled.button`
 width: 200px;
-height: 50px;
-display: inline-flex;
 outline: none;
 border: none;
+height:100%;
+display:inline-block;
+text-align:center;
 border-radius: 4px;
 color: white;
 font-weight: bold;
 cursor: pointer;
-font-size: 1rem;
-
+font-size: 18px;
 background: #228be6;
 &:hover {
   background: #339af0;

@@ -2,20 +2,23 @@ import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Search from './components/search';
 import UrlList from './components/urlList';
 import BtnList from './components/btnList';
+import Mypage from './page/mypage';
+import Modal from './components/modal';
+
 function App() {
   return (
     <div>
       <Wrap>
-        <Search/>
 
         <Routes>
         <Route path="/" element={<UrlList/>}/>
+        <Route path="/mypage" element={<Mypage/>}/>
         </Routes>
 
         <BtnList/>
+        <Modal/>
       </Wrap>
     </div>
   );
